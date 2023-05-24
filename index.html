@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blog App</title>
+    <link
+      rel="shortcut icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Мой дневник</h1>
+      <div class="row">
+        <div class="col">
+          <h2>Новая запись</h2>
+          <div class="form__group">
+            <textarea
+              id="title"
+              class="title"
+              placeholder="Заголовок"
+              rows="1"
+            ></textarea>
+          </div>
+          <div class="form__group">
+            <textarea
+              id="text"
+              class="text"
+              placeholder="Напиши свои мысли"
+              rows="20"
+            ></textarea>
+          </div>
+          <button id="public__btn" class="public__btn btn">Опубликовать</button>
+        </div>
+        <div class="col">
+          <h2>История записей</h2>
+          <div id="posts" class="posts">
+            <p>Тут пока пусто...</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script/main.js"></script>
+  </body>
+</html>
