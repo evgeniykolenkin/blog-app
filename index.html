@@ -21,10 +21,10 @@
   </head>
   <body>
     <main class="container">
-      <h1>Мой дневник</h1>
+      <h1>Прриложение блог</h1>
       <div class="row">
         <div class="col">
-          <h2>Новая запись</h2>
+          <h2>Новый пост</h2>
           <div class="form__group">
             <textarea
               id="title"
@@ -37,14 +37,26 @@
             <textarea
               id="text"
               class="text"
-              placeholder="Напиши свои мысли"
+              placeholder="Текст поста"
               rows="20"
             ></textarea>
           </div>
           <button id="public__btn" class="public__btn btn">Опубликовать</button>
+          <div
+            id="validation__message-title"
+            class="validation__message-title validation__message-title-hidden"
+          >
+            <p>Длина заголовка больше 20 символов</p>
+          </div>
+          <div
+            id="validation__message-text"
+            class="validation__message-text validation__message-text-hidden"
+          >
+            <p>Длина текста больше 100 символов</p>
+          </div>
         </div>
         <div class="col">
-          <h2>История записей</h2>
+          <h2>Лента</h2>
           <div id="posts" class="posts">
             <p>Тут пока пусто...</p>
           </div>

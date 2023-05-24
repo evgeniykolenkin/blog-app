@@ -1,9 +1,18 @@
+const VALIDATION_TITLE_MESSAGE_CLASSNAME = "validation__message-title-hidden";
+const VALIDATION_TEXT_MESSAGE_CLASSNAME = "validation__message-text-hidden";
+
 const posts = [];
 
 const publicBtnNode = document.getElementById("public__btn");
 const titleAreaNode = document.getElementById("title");
 const textAreaNode = document.getElementById("text");
 const postsNode = document.getElementById("posts");
+const validationMessageTitle = document.getElementById(
+  "validation__message-title"
+);
+const validationMessageText = document.getElementById(
+  "validation__message-text"
+);
 
 function addPost() {
   const postFromUser = getPostFromUser();
@@ -60,4 +69,25 @@ function renderPosts() {
   postsNode.innerHTML = postsHTML;
 }
 
+function lengthTitleCheck(event) {
+  const currentValue = event.target.value;
+  if (currentValue.length > 20) {
+    validationMessageTitle.classList.remove(VALIDATION_TITLE_MESSAGE_CLASSNAME);
+  } else {
+    validationMessageTitle.classList.add(VALIDATION_TITLE_MESSAGE_CLASSNAME);
+  }
+}
+
+function lengthTextCheck(event) {
+  const currentValue = event.target.value;
+  if (currentValue.length > 100) {
+    validationMessageText.classList.remove(VALIDATION_TEXT_MESSAGE_CLASSNAME);
+  } else {
+    validationMessageText.classList.add(VALIDATION_TEXT_MESSAGE_CLASSNAME);
+  }
+}
+
+// обработчики событий
 publicBtnNode.addEventListener("click", addPost);
+titleAreaNode.addEventListener("input", lengthTitleCheck);
+textAreaNode.addEventListener("input", lengthTextCheck);

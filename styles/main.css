@@ -75,11 +75,12 @@ textarea::placeholder {
 }
 
 .posts p {
-  color: #979797;
+  color: #f3f7d4;
 }
 
 .post__title,
 .post__text {
+  word-wrap: break-word;
   padding: 5px;
   border-radius: 5px;
 }
@@ -111,4 +112,18 @@ textarea::placeholder {
   padding: 9px;
   background-color: #448d76;
   color: #f3f7d4;
+}
+
+.validation__message-title,
+.validation__message-text {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #ff0000;
+}
+
+.validation__message-title-hidden,
+.validation__message-text-hidden {
+  display: none;
 }
