@@ -31,14 +31,14 @@ h2 {
 
 .row {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .col {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  width: calc(50% - 5px);
+  width: calc(50% - 10px);
   padding: 5px;
   background-color: #f3f7d4;
   border-radius: 5px;
@@ -68,16 +68,19 @@ textarea::placeholder {
 }
 
 .posts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   font-weight: 400;
   font-size: 32px;
   line-height: 39px;
-  color: #448d76;
 }
 
-.posts p {
-  color: #f3f7d4;
+.default__text {
+  color: #979797;
 }
 
+.post__date,
 .post__title,
 .post__text {
   word-wrap: break-word;
@@ -85,10 +88,29 @@ textarea::placeholder {
   border-radius: 5px;
 }
 
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 2px;
+  border: 2px solid #cbe432;
+  border-radius: 10px;
+}
+
+.post__date {
+  font-size: 20px;
+  line-height: 20px;
+  background-color: #448d76;
+  color: #cbe432;
+}
+
 .post__title {
+  font-weight: 700;
   background-color: #7fbd32;
+  color: #ffffff;
 }
 .post__text {
+  color: #448d76;
   background-color: #cbe432;
 }
 
@@ -114,11 +136,14 @@ textarea::placeholder {
   color: #f3f7d4;
 }
 
+.btn:disabled {
+  background-color: #979797;
+}
 .validation__message-title,
 .validation__message-text {
   font-weight: 400;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 22px;
   text-align: center;
   color: #ff0000;
 }
